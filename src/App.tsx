@@ -22,7 +22,9 @@ export default function App() {
     max_research_loops: number;
     reasoning_model: string;
   }>({
-    apiUrl: import.meta.env.DEV ? "http://localhost:2024" : "/api",
+    apiUrl:
+      import.meta.env.VITE_API_URL ||
+      (import.meta.env.DEV ? "http://localhost:2024" : "/api"),
     assistantId: "agent",
     messagesKey: "messages",
     onUpdateEvent: (event: any) => {
