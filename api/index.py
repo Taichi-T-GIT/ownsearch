@@ -22,7 +22,7 @@ app.add_middleware(
 add_routes(
     app,
     graph,
-    path="/agent",
+    path="/",
     input_schema=str,
     output_schema=str,
     config_keys=["configurable"],
